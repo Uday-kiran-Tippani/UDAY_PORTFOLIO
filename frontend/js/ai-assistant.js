@@ -20,11 +20,18 @@ document.addEventListener("DOMContentLoaded", () => {
     const typing = addMessage("🤖 is typing...", "typing");
 
     try {
-      const res = await fetch("http://127.0.0.1:5000/chat", {
+      // const res = await fetch("http://127.0.0.1:5000/chat", {
+      //   method: "POST",
+      //   headers: { "Content-Type": "application/json" },
+      //   body: JSON.stringify({ message: text })
+      // });   //this is was commented to connect the ai-assistent with the real render deployed backend
+      const API_BASE = "https://uday-portfolio-backend-service.onrender.com";
+      const res = await fetch(`${API_BASE}/chat`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ message: text })
       });
+
 
       const data = await res.json();
       typing.remove();
