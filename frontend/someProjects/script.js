@@ -1,5 +1,5 @@
 const cities = [
-  "New York", "London", "Tokyo", "Paris", "Sydney",
+  "Nidadavole", "London", "Tokyo", "Paris", "Sydney",
   "Delhi", "Moscow", "Cape Town", "Beijing", "Rio de Janeiro"
 ];
 const apiKey = "392f64ab02624a7b0fa53d7200c9621e";
