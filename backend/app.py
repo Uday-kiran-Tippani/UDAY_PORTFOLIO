@@ -17,7 +17,8 @@ SOCIAL_LINKS = {
     "linkedin": "https://www.linkedin.com/in/udaykirantippani",
     "email": "mailto:udaykiran143us@gmail.com?subject=Portfolio%20Inquiry",
     "twitter": "https://x.com/UTippani25615",
-    "x": "https://x.com/UTippani25615"
+    "x": "https://x.com/UTippani25615",
+    "git" : "https://github.com/Uday-kiran-Tippani"
 }
 
 @app.route("/chat", methods=["POST"])
@@ -57,6 +58,13 @@ def chat():
                 "action": "open_url",
                 "url": SOCIAL_LINKS["x"],
                 "reply": "Opening X 🌍"
+            })
+         if "git" in user_lower or "github" in user_lower:
+            return jsonify({
+                "type": "action",
+                "action": "open_url",
+                "url": SOCIAL_LINKS["git"],
+                "reply": "Opening GitHub 🌍"
             })
 
     if any(word in user_lower for word in ["email", "contact", "mail", "gmail"]):
