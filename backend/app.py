@@ -122,6 +122,7 @@ User Question:
     })
 
 
-if __name__ == "__main__":
-    app.run()
+# if __name__ == "__main__":
+#     app.run()
+#this was commented for smooth deploy in the render
 
