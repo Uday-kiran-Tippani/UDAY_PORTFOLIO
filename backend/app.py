@@ -59,7 +59,7 @@ def chat():
                 "url": SOCIAL_LINKS["x"],
                 "reply": "Opening X 🌍"
             })
-         if "git" in user_lower or "github" in user_lower:
+        if "git" in user_lower or "github" in user_lower:
             return jsonify({
                 "type": "action",
                 "action": "open_url",
@@ -123,5 +123,5 @@ User Question:
 
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run()
 
